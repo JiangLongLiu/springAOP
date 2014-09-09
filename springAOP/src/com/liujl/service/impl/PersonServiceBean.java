@@ -7,8 +7,15 @@ import com.liujl.service.PersonService;
 public class PersonServiceBean implements PersonService {
 	
 	@Override
-	public void save() {
-		System.out.println("我是save()方法");
+	public void save(String name) {
+		throw new RuntimeException("我爱例外");
+//		System.out.println("我是save()方法");
+	}
+
+	@Override
+	public String getPersonName(Integer id) {
+		
+		return "xxx";
 	}
 
 }
